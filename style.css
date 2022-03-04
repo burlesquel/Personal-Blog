@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 1rem;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    color: #143774;
+    margin-top: 0;
+}
+
+h1 {
+font-size: clamp(1.5rem, 5vw, 2rem);
+    margin: 0;
+    margin-bottom: 0.25rem;
+
+}
+
+h2{
+    font-size: clamp(1rem, 6vw, 1.5rem);
+}
+
+h3 {
+    color: #1792d2;
+}
+
+a {
+    color: #1792d2;
+    text-decoration: none;
+}
+
+span{
+    font-size: 0.88rem;
+}
+
+p{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+
+nav a {
+    color: #707070;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .25em 0;
+}
+
+img{
+    object-fit: contain;
+    width: 100% ;
+}
+
+/* HEADER */
+
+
+header{
+    width: 100%;
+    background-color: #F8F8F8;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 2em 0;
+
+    
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    /* position: fixed; */
+    background-color: #F8F8F8;;
+}
+
+ul{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-under-logo{
+    font-weight: 700;
+    color: #1792d2;
+    font-size: .75rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li{
+    margin-left: 2rem;
+}
+
+/* CONTENT */
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 66.6%;
+    justify-content: space-around;
+    margin-top:3.5rem;;
+}
+
+    /* LEFT SIDE */
+
+.left-content{
+    width: 70%;
+}
+
+.left-content a{
+    color: #1792D2;
+    font-weight: bold;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding-bottom: 0.5rem; */
+}
+
+.post-recent{
+    border-bottom: 1px black solid;
+}
+
+.recent-post-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post > *{
+    margin-bottom: 2rem;
+}
+
+.post-old{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.old-post-content-left{
+    width: 30%;
+}
+
+.old-post-content-left > img{
+    object-fit: cover;
+    min-height: 250px;
+    margin-bottom: 1rem;
+}
+
+.old-post-content-right{
+    width: 68%;
+}
+
+.old-post-content-right > *{
+    margin-bottom: 1rem;
+}
+
+
+    /* RIGHT SIDE */
+
+.right-content{
+    width: 25%;
+    align-items: center;
+    margin-left: 2.5rem;
+}
+
+.side-widget{
+    padding: 1rem;
+    border: 1.2rem #EBEBEB solid;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.side-widget > *{
+    margin-bottom: 1rem;
+}
+
+.side-widget p{
+    line-height: 1.6rem;
+}
+
+.side-post{
+    border-bottom: 1px black solid;
+    padding-bottom: 1rem;
+}
+
+.right-content *:last-child *:last-child{
+    border: none;
+    padding-bottom: none;
+}
+
+.right-content *:last-child{
+    padding-bottom: 0;
+}
+
+/* BOTTOM */
+
+.bottom{
+    background-color: #143774;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 5rem 0;
+}
+
+@media screen and (max-width: 935px) {  
+    /* HEADER FOR TABLET */ 
+    .header-container{
+        flex-direction: column;
+    }
+    .title-div{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    header{
+        padding: 0;
+        justify-content: center;
+    }
+    nav{
+        justify-content: center;
+    }
+    li{
+        margin-top: 0.5rem;
+        margin-bottom:1rem;
+        margin-left: 0;
+    }
+
+    /* ??????????? NO IDEA */
+    .content{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:566px){
+    /* HEADER FOR MOBILE */
+    ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-div{
+        margin-bottom: 0.8rem;
+    }
+
+    .post-old{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .post-old>*{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:700px){
+    /* CONTENT LAYOUT FOR TABLET */
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content{
+        width: 95%;
+    }
+
+    .right-content{
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .right-content img{
+        height: 7rem;
+        object-fit: cover;
+    }
+}
